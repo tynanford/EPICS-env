@@ -91,6 +91,29 @@ SRC_GITURL_STREAM = https://github.com/paulscherrerinstitute/StreamDevice
 SRC_GITURL_STREAM's origin is file
 ```
 
+### Add modules into `RELEASE.local`
+
+The main rule to generate `configure/MODULESGEN.mk` is not triggered automatically, because of `.local` file. In this case, one shoudl run
+the following rule manually in order to regenerate `configure/MODULESGEN.mk`.
+
+```bash
+make reconf.modules
+```
+
+### Non EPICS modules URL
+
+In case, the module repository isn't in `https://github.com/epics-modules`, one should define the override URL in `configure/CONFIG_MODS` such as
+
+```bash
+## Not all modules are located in github.com/epics-modules, so we have to override them here after GEN.mk
+SRC_GITURL_RECSYNC:=$(SRC_URL_CHANNELFINDER)/$(strip $(SRC_NAME_RECSYNC))
+SRC_GITURL_RETOOLS:=$(SRC_URL_BRUNOSEIVAM)/$(strip $(SRC_NAME_RETOOLS))
+SRC_GITURL_SNCSEQ:=$(SRC_URL_JEONGHANLEE)/$(strip $(SRC_NAME_SNCSEQ))
+SRC_GITURL_ETHERIP:=$(SRC_URL_EPICSTOOLS)/$(strip $(SRC_NAME_ETHERIP))
+SRC_GITURL_STREAM:=$(SRC_URL_PSI)/$(strip $(SRC_NAME_STREAM))
+SRC_GITURL_OPCUA:=$(SRC_URL_RALPH)/$(strip $(SRC_NAME_OPCUA))
+```
+
 ## Clone
 
 ```bash
