@@ -1,7 +1,7 @@
 
 
 
-INSTALL_LOCATION=${HOME}
+INSTALL_LOCATION=/usr/local/epics
 
 
 
