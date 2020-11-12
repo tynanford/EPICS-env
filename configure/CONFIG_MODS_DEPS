@@ -26,6 +26,6 @@ retools_DEPS:=null.base
 ###
 ### Please see RULES_MODS_BUILD for further detailed information
 ### 
-calc_DEPS:=null.base build.sequencer-2-2 build.sscan
-asyn_DEPS:=null.base build.sequencer-2-2 build.sscan build.calc
-std_DEPS:=null.base build.sequencer-2-2 build.asyn
+calc_DEPS:=null.base build.sscan
+asyn_DEPS:=null.base build.calc
+std_DEPS:=null.base build.asyn
