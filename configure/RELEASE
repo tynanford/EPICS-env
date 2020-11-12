@@ -53,10 +53,6 @@ SRC_NAME_ASYN:=asyn
 SRC_TAG_ASYN:=tags/R4-40
 SRC_VER_ASYN:=4.40
 
-SRC_NAME_STD:=std
-SRC_TAG_STD:=1dff82c
-SRC_VER_STD:=1dff82c
-
 
 -include $(TOP)/../RELEASE.local
 -include $(TOP)/configure/RELEASE.local

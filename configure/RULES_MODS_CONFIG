@@ -99,15 +99,3 @@ conf.asyn:
 conf.asyn.show: conf.release.modules.show
 	@cat -b $(TOP)/$(SRC_PATH_ASYN)/configure/RELEASE.local
 	@cat -b $(TOP)/$(SRC_PATH_ASYN)/configure/CONFIG_SITE.local
-
-
-# asyn
-conf.std:
-	@echo "SNCSEQ=$(INSTALL_LOCATION_SNCSEQ)"            > $(TOP)/$(SRC_PATH_STD)/configure/RELEASE.local
-	@echo "ASYN=$(INSTALL_LOCATION_ASYN)"               >> $(TOP)/$(SRC_PATH_STD)/configure/RELEASE.local
-	@echo "INSTALL_LOCATION:=$(INSTALL_LOCATION_STD)"    > $(TOP)/$(SRC_PATH_STD)/configure/CONFIG_SITE.local
-
-conf.std.show: conf.release.modules.show
-	@cat -b $(TOP)/$(SRC_PATH_STD)/configure/RELEASE.local
-	@cat -b $(TOP)/$(SRC_PATH_STD)/configure/CONFIG_SITE.local
-
