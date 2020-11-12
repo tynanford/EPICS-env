@@ -11,7 +11,7 @@ conf.modules.show: conf.modules.zero.show conf.modules.one.show
 MODS_ZERO_VARS:=conf.iocStats conf.retools conf.caPutLog conf.recsync conf.autosave
 MODS_ZERO_SHOW:=$(addsuffix .show, $(MODS_ZERO_VARS))
 
-MODS_ONE_VARS:=conf.calc conf.asyn conf.std
+MODS_ONE_VARS:=conf.calc conf.asyn
 MODS_ONE_SHOW:=$(addsuffix .show, $(MODS_ONE_VARS))
 
 .PHONY: conf.release.modules conf.release.modules.show
