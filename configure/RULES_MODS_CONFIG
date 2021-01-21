@@ -69,6 +69,7 @@ conf.autosave.show: conf.release.modules.show
 
 conf.gtest:
 	@echo "INSTALL_LOCATION:=$(INSTALL_LOCATION_GTEST)" > $(TOP)/$(SRC_PATH_GTEST)/configure/CONFIG_SITE.local
+	@echo "USR_CXXFLAGS_Linux += -std=c++11" >> $(TOP)/$(SRC_PATH_GTEST)/configure/CONFIG_SITE.local
 
 conf.gtest.show: conf.release.modules.show
 	@cat -b $(TOP)/$(SRC_PATH_GTEST)/configure/CONFIG_SITE.local
